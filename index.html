@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Vinícius | System Architect & Visionary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0d0d0d;
+            --primary: #ffffff;
+            --accent-blue: #3b82f6;
+            --accent-gold: #f59e0b; /* Prestígio e Sucesso */
+            --text-muted: #71717a;
+            --border: #1f1f23;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: var(--accent-blue);
+            margin-top: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 20px;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 2px solid var(--border);
+        }
+
+        .experience-item strong {
+            display: block;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .experience-item span {
+            color: var(--accent-blue);
+            font-size: 13px;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            margin: 0 5px 5px 0;
+            display: inline-block;
+        }
+
+        .vector-panel {
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            border: 1px solid var(--accent-gold);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        canvas {
+            max-width: 100% !important;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="card header">
+        <div>
+            <h1>Marcos Vinícius de Sousa</h1>
+            <div class="contact-info">
+                Engenharia de Software (Arquiteto de Soluções)
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">
+                📍 Oliveira, MG | 📧 marcos.viniciussousa.43@gmail.com
+            </div>
+        </div>
+        <div style="text-align: right; border-left: 1px solid var(--border); padding-left: 20px;">
+            <div style="color: var(--accent-gold); font-size: 11px; font-weight: 900;">STATUS: ELITE</div>
+            <div style="color: var(--text-muted); font-size: 10px;">ID: VECTOR-CORE</div>
+        </div>
+    </header>
+
+    <div class="grid">
+        <div class="left-col">
+            <section class="card">
+                <h2>Análise de Competência</h2>
+                <canvas id="skillsChart"></canvas>
+                <div style="margin-top: 20px;">
+                    <span class="skill-tag">Análise Quantitativa</span>
+                    <span class="skill-tag">Arquitetura Conceptual</span>
+                    <span class="skill-tag">Orquestração de IA</span>
+                    <span class="skill-tag">Design & UX</span>
+                </div>
+            </section>
+
+            <section class="vector-panel">
+                <h2 style="margin-top: 0; color: var(--accent-gold);">Projetos Ativos</h2>
+                <p style="font-size: 13px; line-height: 1.6; color: var(--text-muted); margin: 0;">
+                    <strong>VECTOR Engine:</strong> Atuação como Arquiteto de Solução, definindo lógica matemática para análise financeira e protocolos de proteção de ativos via hardware.
+                </p>
+            </section>
+        </div>
+
+        <div class="right-col">
+            <section class="card">
+                <h2>Perfil Estratégico</h2>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0;">
+                    Especialista em orquestrar ferramentas de inteligência avançada para otimizar fluxos de trabalho e processos administrativos. Foco em arquitetura lógica, automação e redução de subjetividade operacional.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Trajetória Profissional</h2>
+                
+                <div class="experience-item">
+                    <span>Graduação | 2024 - Atual</span>
+                    <strong>Engenharia de Software (UniCesumar)</strong>
+                </div>
+
+                <div class="experience-item">
+                    <span>Mercado de Trabalho | 2025 - Atual</span>
+                    <strong>Casarão Rosa - Gestão & Atendimento</strong>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">
+                        Supervisão de fechamento financeiro e organização de fluxo operacional sob demanda.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>Técnico | Concluído</span>
+                    <strong>Recursos Humanos (EE Prof. Pinheiro Campos)</strong>
+                </div>
+
+                <div class="experience-item">
+                    <span>Qualificação | Concluído</span>
+                    <strong>Design Gráfico e Web (Prepara Cursos)</strong>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Arquitetura de Sistemas', 'Lógica Estratégica', 'Análise Quantitativa', 'Design & UX', 'Gestão/RH', 'Orquestração de IA'],
+            datasets: [{
+                label: 'Core Skills',
+                data: [88, 92, 85, 80, 75, 95],
+                backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                borderColor: '#f59e0b',
+                pointBackgroundColor: '#ffffff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    angleLines: { color: '#1f1f23' },
+                    grid: { color: '#1f1f23' },
+                    pointLabels: { color: '#94a3b8', font: { size: 10, weight: '600' } },
+                    ticks: { display: false },
+                    suggestedMin: 50
+                }
+            },
+            plugins: { legend: { display: false } }
+        }
+    });
+</script>
+
+</body>
+</html>
